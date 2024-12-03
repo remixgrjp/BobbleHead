@@ -1,5 +1,7 @@
 # Study
-## Empty Views Activity template
+## Let's make BobbleHead app.
+
+<img width="300px" src="./Screenshot.20241203.png">
 
 # confirmed
 HTC HTL23 (Andorid 5.0.2)
