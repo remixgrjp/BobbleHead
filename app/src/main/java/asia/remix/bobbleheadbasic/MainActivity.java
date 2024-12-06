@@ -17,7 +17,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity{
 	final static String TAG= "MainActivity";
 	ImageView imageView;
-	SpringAnimation springAnimation;
+	SpringAnimation springAnimationX;
+	SpringAnimation springAnimationY;
 
 	@Override
 	public void onStart(){//onCreate → onStart → onResume ／ onRestart → onStart → onResume
@@ -68,7 +69,8 @@ public class MainActivity extends AppCompatActivity{
 
 		imageView= findViewById( R.id.imageView );
 		imageView.setOnClickListener( onClickListener );
-		springAnimation= createSpringAnimation( imageView, SpringAnimation.TRANSLATION_Y );
+		springAnimationX= createSpringAnimation( imageView, SpringAnimation.TRANSLATION_X );
+		springAnimationY= createSpringAnimation( imageView, SpringAnimation.TRANSLATION_Y );
 	}
 
 	SpringAnimation createSpringAnimation( View v, FloatPropertyCompat f ){
@@ -82,9 +84,13 @@ public class MainActivity extends AppCompatActivity{
 	}
 
 	void shakeRestart(){
-		springAnimation.getSpring().setFinalPosition( 0f );
-		springAnimation.setStartValue( 200f );
-		springAnimation.start();
+		springAnimationX.getSpring().setFinalPosition( 0f );
+		springAnimationX.setStartValue( 200f );
+		springAnimationX.start();
+
+		springAnimationY.getSpring().setFinalPosition( 0f );
+		springAnimationY.setStartValue( 200f );
+		springAnimationY.start();
 	}
 
 	View.OnClickListener onClickListener= new View.OnClickListener(){
