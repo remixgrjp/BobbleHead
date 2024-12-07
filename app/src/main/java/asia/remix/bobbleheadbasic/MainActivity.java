@@ -69,16 +69,26 @@ public class MainActivity extends AppCompatActivity{
 
 		imageView= findViewById( R.id.imageView );
 		imageView.setOnClickListener( onClickListener );
-		springAnimationX= createSpringAnimation( imageView, SpringAnimation.TRANSLATION_X );
-		springAnimationY= createSpringAnimation( imageView, SpringAnimation.TRANSLATION_Y );
+		springAnimationX= createSpringAnimationB( imageView, SpringAnimation.TRANSLATION_X );
+		springAnimationY= createSpringAnimationA( imageView, SpringAnimation.TRANSLATION_Y );
 	}
 
-	SpringAnimation createSpringAnimation( View v, FloatPropertyCompat f ){
+	SpringAnimation createSpringAnimationA( View v, FloatPropertyCompat f ){
 		Log.d( TAG, "createSpringAnimation()" );
 		SpringAnimation sa = new SpringAnimation( v, f );//最終値無し
 		SpringForce sf = new SpringForce();//最終値無し
 		sf.setStiffness( SpringForce.STIFFNESS_MEDIUM );//バネ定数 硬さ
 		sf.setDampingRatio( SpringForce.DAMPING_RATIO_HIGH_BOUNCY / 4 );//減衰比
+		sa.setSpring( sf );
+		return sa;
+	}
+
+	SpringAnimation createSpringAnimationB( View v, FloatPropertyCompat f ){
+		Log.d( TAG, "createSpringAnimation()" );
+		SpringAnimation sa = new SpringAnimation( v, f );//最終値無し
+		SpringForce sf = new SpringForce();//最終値無し
+		sf.setStiffness( SpringForce.STIFFNESS_LOW );//バネ定数 硬さ
+		sf.setDampingRatio( SpringForce.DAMPING_RATIO_HIGH_BOUNCY / 3 );//減衰比
 		sa.setSpring( sf );
 		return sa;
 	}
