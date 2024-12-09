@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity{
 	ImageView imageView;
 	SpringAnimation springAnimationX;
 	SpringAnimation springAnimationY;
+	SpringAnimation springAnimationR;
 
 	@Override
 	public void onStart(){//onCreate → onStart → onResume ／ onRestart → onStart → onResume
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity{
 		imageView.setOnClickListener( onClickListener );
 		springAnimationX= createSpringAnimationB( imageView, SpringAnimation.TRANSLATION_X );
 		springAnimationY= createSpringAnimationA( imageView, SpringAnimation.TRANSLATION_Y );
+		springAnimationR= createSpringAnimationB( imageView, SpringAnimation.ROTATION );
 	}
 
 	SpringAnimation createSpringAnimationA( View v, FloatPropertyCompat f ){
@@ -101,6 +103,10 @@ public class MainActivity extends AppCompatActivity{
 		springAnimationY.getSpring().setFinalPosition( 0f );
 		springAnimationY.setStartValue( 200f );
 		springAnimationY.start();
+
+		springAnimationR.getSpring().setFinalPosition( 0f );
+		springAnimationR.setStartValue( 10f );
+		springAnimationR.start();
 	}
 
 	View.OnClickListener onClickListener= new View.OnClickListener(){
