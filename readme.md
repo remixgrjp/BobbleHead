@@ -1,7 +1,7 @@
 # Study
 ## Let's make BobbleHead app.
 
-<video src="Screenshot.20241210.mp4" controls loop autoplay muted></video>
+https://github.com/user-attachments/assets/094464ff-1359-4581-a26a-ea579608d83d
 
 # confirmed
 HTC HTL23 (Andorid 5.0.2)
@@ -23,3 +23,6 @@ Cores: 8
 ```
 # article
 comming soon
+
+# product
+https://play.google.com/store/apps/details?id=asia.remix.bobbleheadfree
