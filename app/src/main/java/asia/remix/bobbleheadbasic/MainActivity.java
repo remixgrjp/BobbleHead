@@ -69,8 +69,8 @@ public class MainActivity extends AppCompatActivity{
 
 		imageView= findViewById( R.id.imageView );
 		imageView.setOnClickListener( onClickListener );
-		springAnimationX= createSpringAnimationB( imageView, SpringAnimation.TRANSLATION_X );
-		springAnimationY= createSpringAnimationA( imageView, SpringAnimation.TRANSLATION_Y );
+		springAnimationX= createSpringAnimationB( imageView, SpringAnimation.ROTATION_X );
+		springAnimationY= createSpringAnimationA( imageView, SpringAnimation.ROTATION_Y );
 	}
 
 	SpringAnimation createSpringAnimationA( View v, FloatPropertyCompat f ){
@@ -95,11 +95,11 @@ public class MainActivity extends AppCompatActivity{
 
 	void shakeRestart(){
 		springAnimationX.getSpring().setFinalPosition( 0f );
-		springAnimationX.setStartValue( 200f );
+		springAnimationX.setStartValue( 10f );
 		springAnimationX.start();
 
 		springAnimationY.getSpring().setFinalPosition( 0f );
-		springAnimationY.setStartValue( 200f );
+		springAnimationY.setStartValue( 10f );
 		springAnimationY.start();
 	}
 
