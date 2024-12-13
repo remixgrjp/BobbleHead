@@ -1,7 +1,7 @@
 # Study
 ## Let's make BobbleHead app.
 
-<video src="Screenshot.20241208.mp4" controls loop autoplay muted></video>
+https://github.com/user-attachments/assets/dae13dc1-adab-4668-86e5-f72754395231
 
 # confirmed
 HTC HTL23 (Andorid 5.0.2)
